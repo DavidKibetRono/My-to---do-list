@@ -78,6 +78,43 @@ try {
 
         }
 
+        function myfun3() {
+            var x = document.getElementById("mysave").value;
+
+            var y = document.getElementsByTagName("li");
+
+
+            for (var t = 0; t < y.length; t++) {
+
+                y[t].innerHTML = x;
+
+                var myDf = document.createElement("span")
+                var myDftNode = document.createTextNode('Delete');
+
+                myDf.appendChild(myDftNode)
+                myDf.className = "delete"
+                y[t].appendChild(myDf);
+
+
+                var myDftt = document.createElement("span")
+                var myDftNode = document.createTextNode('Edit');
+
+                myDftt.appendChild(myDftNode)
+                myDftt.className = "edit"
+                y[t].appendChild(myDftt)
+
+                mydelete[0].addEventListener("click", function() {
+
+                    mylist.style.display = "none";
+                })
+
+                z.style.display = "none";
+            }
+
+
+        }
+
+
 } catch (err) {
 
      alert(err)
