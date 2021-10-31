@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="to-do.css">
+    <title>TO - DO LIST</title>
+</head>
+<body>
+    <div class="content">
+        <h2>TO-DO LIST</h2>
+
+        <input type="text" id="myInput" name="list" placeholder="Add your list.." autocomplete="off" autofocus>
+        <input onclick="myfun()" type="submit" id="btn" value="Add">
+
+
+        <input type="text" id="myedit" style="display: none;" name="list" placeholder="top your list.." autocomplete="off">
+        <button onclick="myfun2()" style="display: none;" type="sub" id="myedit">Update</button>
+
+        <input type="text" id="mysave" style="display: none;" name="list" placeholder="update your list.." autocomplete="off">
+        <button onclick="myfun3()" style="display: none;" type="sub" id="mys">Save</button>
+
+
+        <ul id="unordered_List">
+            <li id="mydefault">Moringa</li>
+
+        </ul>
+    </div>
+    <script src="to-do.js"></script>
+</body>
+</html>
