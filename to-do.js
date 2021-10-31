@@ -28,6 +28,25 @@ try {
         mylist.style.display = "none";
     })
 
+        //implement edit functionality on edit button (default li)
+
+        var myedit = document.getElementsByClassName("edit");
+        var inputs = document.getElementsByTagName("li");
+
+        var z = document.getElementById("myedit");
+
+
+        myedit[0].addEventListener("click", function() {
+
+            var mm = document.querySelectorAll("#myedit");
+
+            for (var i = 0; i < mm.length; i++) {
+
+                mm[i].style.display = "block";
+
+            }
+        })
+
 } catch (err) {
 
      alert(err)
