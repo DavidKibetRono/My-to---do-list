@@ -47,6 +47,37 @@ try {
             }
         })
 
+        function myfun2() {
+            var x = document.getElementById("myedit").value;
+
+            var y = document.getElementById("mydefault");
+
+            y.innerHTML = x;
+
+            var myDf = document.createElement("span")
+            var myDftNode = document.createTextNode('Delete');
+
+            myDf.appendChild(myDftNode)
+            myDf.className = "delete"
+            y.appendChild(myDf);
+
+
+            var myDftt = document.createElement("span")
+            var myDftNode = document.createTextNode('Edit');
+
+            myDftt.appendChild(myDftNode)
+            myDftt.className = "edit"
+            y.appendChild(myDftt)
+
+            mydelete[0].addEventListener("click", function() {
+
+                mylist.style.display = "none";
+            })
+
+            z.style.display = "none";
+
+        }
+
 } catch (err) {
 
      alert(err)
