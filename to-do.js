@@ -113,10 +113,103 @@ try {
 
 
         }
+            //implete onclick myfun() 
+            function myfun() {
+                // create li element for input
+                var myElement = document.createElement('li')
+                var val = document.getElementById("myInput").value;
+
+                var data = document.createTextNode(val);
+
+                myElement.appendChild(data);
+
+                var myButton = document.getElementById("btn");
 
 
-} catch (err) {
+                if (val == "") {
 
-     alert(err)
+                    alert("Input field cannot be empty")
 
-}
+                } else {
+
+                    var myUl = document.getElementById("unordered_List");
+                    myUl.appendChild(myElement);
+                }
+
+                document.getElementById("myInput").value = "";
+
+
+                var createDelete = document.createElement("span");
+
+                var deleteNode = document.createTextNode("Delete");
+
+
+                createDelete.appendChild(deleteNode);
+
+                createDelete.className = "delete";
+
+                if (val == "") {
+                    alert("Input field cannot be empty")
+
+                } else {
+                    var liElement = document.getElementsByTagName("li");
+                    for (var i = 0; i < liElement.length; i++) {
+                        liElement[i].appendChild(createDelete);
+
+                    }
+
+                }
+
+                var editElement = document.createElement("span");
+                var editNode = document.createTextNode('Edit');
+
+                editElement.appendChild(editNode);
+                editElement.className = "edit";
+
+                if (val == "") {
+
+                    alert("Input field cannot be empty")
+
+
+                } else {
+                    var liElement = document.getElementsByTagName("li");
+
+                    for (var i = 0; i < liElement.length; i++)
+
+                        liElement[i].appendChild(editElement)
+                }
+
+                for (var e = 0; e < myedit.length; e++) {
+
+                    myedit[e].addEventListener("click", function() {
+
+                        var save = document.querySelectorAll("#mysave");
+                        var save2 = document.querySelectorAll("#mys");
+
+
+                        for (var i = 0; i < save.length; i++) {
+
+                            save[i].style.display = "block";
+                            save2[i].style.display = "block";
+
+
+                        }
+                    })
+                }
+                var deletebutton = document.getElementsByClassName("delete");
+
+                for (var i = 0; i < deletebutton.length; i++) {
+
+                    deletebutton[i].addEventListener("click", function() {
+
+                        myElement.style.display = "none";
+                    })
+
+                }
+        }
+
+    } catch (err) {
+
+        alert(err)
+
+    }
