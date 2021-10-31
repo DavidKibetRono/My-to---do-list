@@ -19,6 +19,14 @@ try {
     list.appendChild(myDft) 
     
     
+    // implement delete functionality on Delete button(default li)
+    var mylist = document.getElementById("mydefault")
+    var mydelete = document.getElementsByClassName("delete")
+
+    mydelete[0].addEventListener("click", function() {
+
+        mylist.style.display = "none";
+    })
 
 } catch (err) {
 
