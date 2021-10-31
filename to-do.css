@@ -63,3 +63,36 @@ ul li {
     margin-top: 5px;
     height: 30px;
 }
+.deleteDefault {
+    color: red;
+}
+
+.delete {
+    float: right;
+    margin-top: -5px;
+    margin-right: 0px;
+    padding: 4px 15px;
+    background-color: red;
+    color: white;
+}
+
+.delete:hover {
+    font-size: 25px;
+    ;
+    color: black
+}
+
+.edit {
+    float: right;
+    margin-top: -5px;
+    margin-right: 2px;
+    padding: 4px 30px;
+    background-color: blue;
+    color: white;
+}
+
+.edit:hover {
+    font-size: 25px;
+    ;
+    color: black;
+}
